@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2 (Python 3.8.2 on win32)" generated="20200501 18:43:29.268" rpa="false">
+<suite id="s1" name="RobotProject1" source="C:\Users\sushmasingh\eclipse-workspace-python2020\RobotProject1">
+<suite id="s1-s1" name="Test" source="C:\Users\sushmasingh\eclipse-workspace-python2020\RobotProject1\Test">
+<suite id="s1-s1-s1" name="TestSuite1" source="C:\Users\sushmasingh\eclipse-workspace-python2020\RobotProject1\Test\TestSuite1.robot">
+<test id="s1-s1-s1-t1" name="SampleLoginTest">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200501 18:43:29.690" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" starttime="20200501 18:43:29.690" endtime="20200501 18:43:43.639"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20200501 18:43:43.640" endtime="20200501 18:43:43.645"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=txtUsername</arg>
+<arg>&amp;{Logindata} [Username]</arg>
+</arguments>
+<msg timestamp="20200501 18:43:43.647" level="INFO">Typing text '{'Username': 'Admin', 'Password': 'admin123'} [Username]' into text field 'id=txtUsername'.</msg>
+<status status="PASS" starttime="20200501 18:43:43.645" endtime="20200501 18:43:44.307"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=txtPassword</arg>
+<arg>&amp;{Logindata} [Password]</arg>
+</arguments>
+<msg timestamp="20200501 18:43:44.309" level="INFO">Typing password into text field 'id=txtPassword'.</msg>
+<msg timestamp="20200501 18:43:44.423" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20200501 18:43:44.950" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20200501 18:43:44.308" endtime="20200501 18:43:44.951"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=btnLogin</arg>
+</arguments>
+<msg timestamp="20200501 18:43:44.953" level="INFO">Clicking element 'id=btnLogin'.</msg>
+<status status="PASS" starttime="20200501 18:43:44.952" endtime="20200501 18:43:47.526"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=welcome</arg>
+</arguments>
+<msg timestamp="20200501 18:43:47.531" level="INFO">Clicking element 'id=welcome'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200501 18:43:50.186" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=81.0.4044.129)
+</msg>
+<status status="FAIL" starttime="20200501 18:43:50.013" endtime="20200501 18:43:50.186"></status>
+</kw>
+<msg timestamp="20200501 18:43:50.187" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=81.0.4044.129)
+</msg>
+<msg timestamp="20200501 18:43:50.194" level="FAIL">Element with locator 'id=welcome' not found.</msg>
+<status status="FAIL" starttime="20200501 18:43:47.528" endtime="20200501 18:43:50.195"></status>
+</kw>
+<doc>This is login test case</doc>
+<status status="FAIL" starttime="20200501 18:43:29.689" endtime="20200501 18:43:50.196" critical="yes">Element with locator 'id=welcome' not found.</status>
+</test>
+<status status="FAIL" starttime="20200501 18:43:29.352" endtime="20200501 18:43:50.200"></status>
+</suite>
+<status status="FAIL" starttime="20200501 18:43:29.348" endtime="20200501 18:43:50.211"></status>
+</suite>
+<status status="FAIL" starttime="20200501 18:43:29.315" endtime="20200501 18:43:50.216"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="RobotProject1">RobotProject1</stat>
+<stat pass="0" fail="1" id="s1-s1" name="Test">RobotProject1.Test</stat>
+<stat pass="0" fail="1" id="s1-s1-s1" name="TestSuite1">RobotProject1.Test.TestSuite1</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20200501 18:43:50.187" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=81.0.4044.129)
+</msg>
+</errors>
+</robot>
